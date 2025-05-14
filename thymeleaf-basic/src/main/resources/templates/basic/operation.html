@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html xmlns:th="www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>산술, 비교 연산</h1>
+<ul>
+    <li>1 + 1 = <span th:text="${1 + 1}"></span></li>
+    <li>1 - 1 = <span th:text="${1 - 1}"></span></li>
+    <li>1 * 2 = <span th:text="${1 * 2}"></span></li>
+    <li>4 / 2 = <span th:text="${4 / 2}"></span></li>
+    <li>1 > 1 = <span th:text="${1 &gt; 1}"></span></li>
+    <li>1 > 1 = <span th:text="${1 gt 1}"></span></li>
+    <li>1 >= 1 = <span th:text="${1 ge 1}"></span></li>
+    <li>1 < 1 = <span th:text="${1 < 1}"></span></li>
+    <li>1 <= 1 = <span th:text="${1 <= 1}"></span></li>
+    <li>4 % 3 = <span th:text="${4 % 3}"></span></li>
+</ul>
+
+<h1>조건식</h1>
+<ul>
+    <li><span th:text="(10 % 2 == 0)?${data}:'no data'"></span></li>
+</ul>
+
+<h1>Elvis 연산(조건식 간단하게)</h1>
+<ul>
+    <li><span th:text="(${data})?:'no data'"></span></li>
+    <li><span th:text="(${nullData})?:'no data'"></span></li>
+</ul>
+
+<h1>Elvis 연산에 _</h1>
+<ul>
+    <li><span th:text="(${nullData})?_">no data</span></li>
+</ul>
+
+</body>
+</html>

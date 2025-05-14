@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html xmlns:th="www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+<h1>URL 링크</h1>
+
+<ul>
+  <li><a th:href="@{/hello}">/hello</a></li>
+  <li><a th:href="@{/hello(param1=${param1}, param2=${param2})}">/hello?param1=no1param&param2no2param</a></li>
+</ul>
+</body>
+</html>
